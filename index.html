@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>     
+
+<header>
+    <div class="header-container">
+        <div class="left-side">
+            <div>
+                <img class="logo" src="image/logo.png" alt="">
+            </div>
+           <div>
+            <h2 class="main-title">World Weather Information</h2>
+           </div>
+        </div>
+        <div class="right-side">
+            <button class="menu-btn" onclick="dropDown()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div class="dropdown-menu">
+                <div class="dropdown-tilte">
+                    <button class="removeDropdown" onclick="remove()">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <ul class="dropdown-menu-ul">
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://www.accuweather.com/" target="_blank">accuweather</a>
+                    </li>
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://amindi.ge/ka/" target="_blank">amindi</a>
+                    </li>
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://worldweather.wmo.int/en/home.html" target="_blank">worldweather</a>
+                    </li>
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://www.worldweatheronline.com/" target="_blank">worldweatheronline</a>
+                    </li>
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://www.timeanddate.com/weather/" target="_blank">timeanddate</a>
+                    </li>
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://www.ventusky.com/" target="_blank">ventusky</a>
+                    </li>
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://www.weather-forecast.com/" target="_blank">weather-forecast</a>
+                    </li>
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://weather-and-climate.com/">weather-and-climate</a>
+                    </li>
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://world-weather.info/" target="_blank">world-weather</a>
+                    </li>
+                    <li class="dropdown-menu-li">
+                        <a class="dropdown-menu-a" href="https://map.worldweatheronline.com/">world weather map</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+ 
+<div class="container">
+    <img class="bg" src="image/header-img.jpg" alt="">
+    <div class="input-div">
+        <input type="text" placeholder="Search Country" class="inputTxt">
+        <button class="btn">
+            <span class="material-symbols-outlined">search</span>
+        </button>
+    </div>
+    <div>
+        <div class="card-container">
+            <div class="card">
+                <h1 class="name" id="name"></h1>
+                <p class="country"></p>
+                <p class="temp"></p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div class="content">
+    <div class="weather-facts">
+        <div>
+            <video class="video" src="image/video.mp4" controls></video>
+        </div>
+        <div class="fact">
+            <h2>Top 7 Facts about weather!</h2>
+            <ol>
+                <li>There are about 2,000 thunderstorms happening right now!</li>
+                <li>The lowest temperature ever recorded is −89.2 °C</li>
+                <li>The highest temperature ever recorded 58 °C</li>
+                <li>Hailstones don’t have a size limit</li>
+                <li>For each minute of the day, 1 billion tonnes of rain falls on the Earth.</li>
+                <li>Space has weather too</li>
+                <li>The wind doesn't make a sound until it blows against an object</li>
+            </ol>
+        </div>
+    </div>
+    <div  class="climate-facts">
+        <img class="map" src="image/tempmap2.png" alt="">
+        <div> 
+            <h2>Continental climate</h2>
+            <p class="infoText">
+                <strong>Continental climates</strong> often have a significant annual variation in temperature (hot summers and cold winters). They tend to occur in the middle latitudes (40 to 55 north), 
+                within large landmasses where <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Prevailing_winds">prevailing winds</a> blow overland bringing some precipitation, and temperatures are not 
+                moderated by <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Body_of_water">bodies of water</a> such as oceans or seas unlike <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Temperate_climate">temperate climates</a>. 
+                Continental climates occur mostly in the Northern Hemisphere, which has the kind of large landmasses on temperate latitudes required for this type of climate to develop. Most of northern and 
+                northeastern <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/China">China</a>, eastern and southeastern <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Europe">Europe</a>, Western and north 
+                western <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Iran">Iran</a>, central and southeastern <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Canada">Canada</a>, and the central and northeastern 
+                <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/United_States">United States</a> have this type of climate.<a href="https://en.wikipedia.org/wiki/Continental_climate#cite_note-cc-1"><sup>[1]</sup></a> 
+                <strong>Continentality</strong> is a measure of the degree to which a region experiences this type of climate.<a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Continental_climate#cite_note-cc-1"><sup>[1]</sup></a>
+            </p>
+            <p class="infoText">
+                In continental climates, <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Precipitation">precipitation</a> tends to be moderate in amount, concentrated mostly in the warmer months. 
+                Only a few areas—in the mountains of the <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Pacific_Northwest">Pacific Northwest</a> of North America and in <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Iraq">Iran</a>, 
+                northern <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Iraq">Iraq</a>, adjacent <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Turkey">Turkey</a>, <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Afghanistan">Afghanistan</a>, 
+                <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Pakistan">Pakistan</a>, and <a class="climateFacts-a" href="https://en.wikipedia.org/wiki/Central_Asia">Central Asia</a>—show a winter maximum in precipitation. A portion of the annual precipitation falls as snowfall, 
+                and snow often remains on the ground for more than a month. Summers in continental climates can feature thunderstorms and frequent hot temperatures; however, summer 
+                weather is somewhat more stable than winter weather.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-div">
+        <p class="footer-p">© 2022 Copyright - All Rights Reserved</p>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
